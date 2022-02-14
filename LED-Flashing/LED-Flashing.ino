@@ -1,3 +1,6 @@
+// Example testing flashing led
+// Written by RHIBA Zakaria
+
 // initialize Input/Output
 int led = 8;
 
