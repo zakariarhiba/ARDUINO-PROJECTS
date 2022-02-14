@@ -1,5 +1,10 @@
 # **Flashing LED**
 
+```
+Example testing flashing led
+Written by RHIBA Zakaria
+````
+
 *This is a simple Project to turn on a Led which is connected to any digital pin that we want, for our code we're using pin 8.*
 
 ## **To Change the led pin :**
