@@ -1,7 +1,7 @@
 # **RGB LED**
 
 ```
-Example testing flashing led
+How to use Struct for RGB LEDs
 Written by RHIBA Zakaria
 ````
 
