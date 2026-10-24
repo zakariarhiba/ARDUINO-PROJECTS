@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "author": "TP1 LM35",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-mega",
+      "id": "mega",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -180,
+      "left": 120,
+      "attrs": {
+        "digits": "4",
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potTemp",
+      "top": 260,
+      "left": -60,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potSeuil",
+      "top": 260,
+      "left": 60,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -150,
+      "left": 480,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -60,
+      "left": 470,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "mega:22",
+      "sevseg1:A",
+      "green",
+      []
+    ],
+    [
+      "mega:23",
+      "sevseg1:B",
+      "green",
+      []
+    ],
+    [
+      "mega:24",
+      "sevseg1:C",
+      "green",
+      []
+    ],
+    [
+      "mega:25",
+      "sevseg1:D",
+      "green",
+      []
+    ],
+    [
+      "mega:26",
+      "sevseg1:E",
+      "green",
+      []
+    ],
+    [
+      "mega:27",
+      "sevseg1:F",
+      "green",
+      []
+    ],
+    [
+      "mega:28",
+      "sevseg1:G",
+      "green",
+      []
+    ],
+    [
+      "mega:29",
+      "sevseg1:DP",
+      "green",
+      []
+    ],
+    [
+      "mega:52",
+      "sevseg1:DIG2",
+      "blue",
+      []
+    ],
+    [
+      "mega:51",
+      "sevseg1:DIG3",
+      "blue",
+      []
+    ],
+    [
+      "mega:50",
+      "sevseg1:DIG4",
+      "blue",
+      []
+    ],
+    [
+      "potTemp:SIG",
+      "mega:A0",
+      "orange",
+      []
+    ],
+    [
+      "potTemp:VCC",
+      "mega:5V",
+      "red",
+      []
+    ],
+    [
+      "potTemp:GND",
+      "mega:GND.2",
+      "black",
+      []
+    ],
+    [
+      "potSeuil:SIG",
+      "mega:A1",
+      "orange",
+      []
+    ],
+    [
+      "potSeuil:VCC",
+      "mega:5V",
+      "red",
+      []
+    ],
+    [
+      "potSeuil:GND",
+      "mega:GND.2",
+      "black",
+      []
+    ],
+    [
+      "mega:32",
+      "led1:A",
+      "yellow",
+      []
+    ],
+    [
+      "led1:C",
+      "r1:1",
+      "black",
+      []
+    ],
+    [
+      "r1:2",
+      "mega:GND.1",
+      "black",
+      []
+    ]
+  ]
+}

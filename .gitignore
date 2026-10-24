@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Fichiers personnels (fiche formateur, plan vidéo) : jamais envoyés sur GitHub
+_private/
+
+# Build Arduino / VS Code
+build/
+.vscode/
