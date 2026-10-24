@@ -1,0 +1,215 @@
+{
+  "projects": [
+    {
+      "title": "Faire clignoter une LED",
+      "slug": "led-clignotante",
+      "order": 1,
+      "level": "Débutant",
+      "duration": "15 min",
+      "board": "Arduino Uno ou Mega",
+      "description": "Le premier projet Arduino : on fait clignoter une LED avec pinMode, digitalWrite et delay.",
+      "notions": [
+        "pinMode",
+        "digitalWrite",
+        "delay",
+        "#define"
+      ],
+      "components": [
+        "Arduino Uno ou Mega",
+        "1 LED",
+        "1 résistance 220 Ω",
+        "breadboard et fils"
+      ],
+      "tags": [
+        "led",
+        "débutant",
+        "sorties numériques"
+      ],
+      "youtube": "",
+      "code": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/LED-Flashing/LED-Flashing.ino",
+      "resources": [],
+      "github": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/LED-Flashing",
+      "author": "RHIBA Zakaria",
+      "updated": "2026-10-24",
+      "folder": "LED-Flashing",
+      "readme": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/LED-Flashing/readme.md"
+    },
+    {
+      "title": "Changer la couleur de deux LED RGB avec une struct",
+      "slug": "led-rgb-struct",
+      "order": 2,
+      "level": "Débutant",
+      "duration": "20 min",
+      "board": "Arduino Uno ou Mega",
+      "description": "On fait passer deux LED RGB du rouge au vert puis au bleu, et on organise le code avec une struct et des fonctions.",
+      "notions": [
+        "LED RGB",
+        "struct",
+        "fonctions avec paramètres"
+      ],
+      "components": [
+        "Arduino Uno ou Mega",
+        "2 LED RGB à cathode commune",
+        "6 résistances 220 Ω",
+        "breadboard et fils"
+      ],
+      "tags": [
+        "led",
+        "rgb",
+        "struct",
+        "débutant"
+      ],
+      "youtube": "",
+      "code": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/RGB_LEDs/RGB_LEDs.ino",
+      "resources": [],
+      "github": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/RGB_LEDs",
+      "author": "RHIBA Zakaria",
+      "updated": "2026-10-24",
+      "folder": "RGB_LEDs",
+      "readme": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/RGB_LEDs/readme.md"
+    },
+    {
+      "title": "Commander une lampe 220 V avec un module relais",
+      "slug": "module-relais",
+      "order": 3,
+      "level": "Débutant",
+      "duration": "20 min",
+      "board": "Arduino Uno ou Mega",
+      "description": "On allume une lampe 220 V avec un bouton, grâce à un module 2 relais commandé par l'Arduino.",
+      "notions": [
+        "module relais",
+        "entrée avec pull-up",
+        "digitalRead"
+      ],
+      "components": [
+        "Arduino Uno ou Mega",
+        "module 2 relais 5 V",
+        "1 bouton poussoir",
+        "1 lampe 220 V avec douille et câble",
+        "fils"
+      ],
+      "tags": [
+        "relais",
+        "220V",
+        "bouton",
+        "domotique"
+      ],
+      "youtube": "",
+      "code": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/Two_Relay_Module/Two_Relay_Module.ino",
+      "resources": [
+        {
+          "label": "Comment marche un module relais (Last Minute Engineers)",
+          "url": "https://lastminuteengineers.com/two-channel-relay-module-arduino-tutorial/"
+        }
+      ],
+      "github": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/Two_Relay_Module",
+      "author": "RHIBA Zakaria",
+      "updated": "2026-10-24",
+      "folder": "Two_Relay_Module",
+      "readme": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/Two_Relay_Module/readme.md"
+    },
+    {
+      "title": "Mesurer la température et l'humidité avec un DHT11",
+      "slug": "capteur-dht11",
+      "order": 4,
+      "level": "Débutant",
+      "duration": "20 min",
+      "board": "Arduino Uno ou Mega",
+      "description": "On lit la température et l'humidité avec un capteur DHT11 et on les affiche sur le moniteur série toutes les 2 secondes.",
+      "notions": [
+        "bibliothèques Arduino",
+        "capteur numérique",
+        "moniteur série"
+      ],
+      "components": [
+        "Arduino Uno ou Mega",
+        "capteur DHT11 (ou module DHT11)",
+        "résistance 10 kΩ si capteur nu",
+        "breadboard et fils"
+      ],
+      "tags": [
+        "capteur",
+        "température",
+        "humidité",
+        "dht11"
+      ],
+      "youtube": "",
+      "code": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/TEMPERATURE_Sensor_dht/TEMPERATURE_Sensor_dht.ino",
+      "resources": [
+        {
+          "label": "Bibliothèque DHT sensor library (Adafruit)",
+          "url": "https://github.com/adafruit/DHT-sensor-library"
+        },
+        {
+          "label": "Bibliothèque Adafruit Unified Sensor",
+          "url": "https://github.com/adafruit/Adafruit_Sensor"
+        }
+      ],
+      "github": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/TEMPERATURE_Sensor_dht",
+      "author": "RHIBA Zakaria",
+      "updated": "2026-10-24",
+      "folder": "TEMPERATURE_Sensor_dht",
+      "readme": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/TEMPERATURE_Sensor_dht/readme.md"
+    },
+    {
+      "title": "Thermomètre numérique avec alarme réglable",
+      "slug": "thermometre-lm35-7-segments",
+      "order": 5,
+      "level": "Intermédiaire",
+      "duration": "3 h",
+      "board": "Arduino Mega 2560",
+      "description": "Un thermomètre au dixième de degré avec un LM35 et un afficheur 7 segments, et une alarme réglable qui fait clignoter une LED. On utilise l'ADC, le multiplexage, les registres et deux timers.",
+      "notions": [
+        "ADC et référence 1,1 V",
+        "afficheur 7 segments",
+        "multiplexage",
+        "registres PORTA",
+        "Timer 1 et Timer 3",
+        "interruptions"
+      ],
+      "components": [
+        "Arduino Mega 2560",
+        "capteur LM35",
+        "afficheur 7 segments 4 chiffres",
+        "potentiomètre 1 kΩ",
+        "1 LED",
+        "8 résistances 1 kΩ",
+        "résistance 3,3 kΩ",
+        "résistance 220 Ω"
+      ],
+      "tags": [
+        "capteur",
+        "température",
+        "7 segments",
+        "timers",
+        "interruptions"
+      ],
+      "youtube": "",
+      "code": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/Digital_Thermometer_LM35/Digital_Thermometer_LM35.ino",
+      "wokwi": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/Digital_Thermometer_LM35/wokwi",
+      "resources": [
+        {
+          "label": "Fiche projet (PDF)",
+          "url": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/blob/main/Digital_Thermometer_LM35/docs/Fiche_projet.pdf"
+        },
+        {
+          "label": "Support de cours complet (PDF)",
+          "url": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/blob/main/Digital_Thermometer_LM35/docs/Support_de_cours.pdf"
+        },
+        {
+          "label": "Datasheet du LM35 (PDF)",
+          "url": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/blob/main/Digital_Thermometer_LM35/docs/datasheet_capteur_LM35.pdf"
+        },
+        {
+          "label": "Simulation Wokwi (circuit et code)",
+          "url": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/Digital_Thermometer_LM35/wokwi"
+        }
+      ],
+      "github": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/Digital_Thermometer_LM35",
+      "author": "RHIBA Zakaria",
+      "updated": "2026-10-24",
+      "folder": "Digital_Thermometer_LM35",
+      "readme": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/Digital_Thermometer_LM35/readme.md"
+    }
+  ]
+}

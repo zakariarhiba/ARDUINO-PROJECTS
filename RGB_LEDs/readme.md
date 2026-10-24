@@ -1,227 +1,199 @@
-# **RGB LED**
+---
+title: "Changer la couleur de deux LED RGB avec une struct"
+slug: "led-rgb-struct"
+order: 2
+level: "Débutant"
+duration: "20 min"
+board: "Arduino Uno ou Mega"
+description: "On fait passer deux LED RGB du rouge au vert puis au bleu, et on organise le code avec une struct et des fonctions."
+notions: ["LED RGB", "struct", "fonctions avec paramètres"]
+components: ["Arduino Uno ou Mega", "2 LED RGB à cathode commune", "6 résistances 220 Ω", "breadboard et fils"]
+tags: ["led", "rgb", "struct", "débutant"]
+youtube: ""
+code: "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/RGB_LEDs/RGB_LEDs.ino"
+resources: []
+github: "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/RGB_LEDs"
+author: "RHIBA Zakaria"
+updated: "2026-10-24"
+---
+
+# **Changer la couleur de deux LED RGB avec une struct**
 
 ```
-How to use Struct for RGB LEDs
-Written by RHIBA Zakaria
-````
-
-*The but of this project is to switch two RGB LEDs color in the same time red to green to blue, to do that we gonna Use a struct to define a RGB LED*
-
-For exemple if we want to turn the RGB LED with the red color we have to send a low value to the green and blue pins bsides red pin.
-
-## **STRUCT**
-
-A structure type is a user-defined composite type. It is composed of fields or members that can have different types. In C++, a structure is the same as a class except that its members are public by default.
-
-It enables the programmer to create a variable that structures a selected set of data.
-
-For instance, it might be useful to have a struct that represents a RGB value. Being a RGB variable always consists of three other variables a struct is the correct datatype.
-
-### **Synatx**
-
-#### Declaration
-
-```C++
-    struct RGB {
-        int red;
-        int green;
-        int blue;
-  }; 
+Projet Arduino n°2 : LED RGB et struct
+Écrit par RHIBA Zakaria, Zakpy Academy
 ```
 
-#### Creating 
+*Dans ce projet on fait changer la couleur de deux LED RGB en même temps : rouge, puis vert, puis bleu. Pour que le code reste propre même avec plusieurs LED, on utilise une struct.*
 
-We're initialize each color with it's pin
+Une LED RGB, c'est en fait trois LED dans un seul boîtier : une rouge, une verte et une bleue. Pour avoir du rouge, on allume la broche rouge et on éteint les broches verte et bleue.
 
-```C++
-RGB led = {9,10,11};
-```
+## **Ce qu'on va apprendre**
 
-## **Initialize :**
+___
 
-To Switch between the color we gonna write three function each one turn on a color, so in the initialize part we gonna just write this three function : 
+- Comment marche une LED RGB.
+- Regrouper plusieurs variables dans une `struct`.
+- Écrire des fonctions qui prennent un paramètre, pour ne pas répéter le même code.
 
-- Turn on red color : 
+## **Le matériel**
 
-```C++
-void red(RGB led){
-    digitalWrite(led.red,HIGH);
-    digitalWrite(led.green,LOW);
-    digitalWrite(led.blue,LOW);
-  }
-```
+___
 
-- Turn on Green Color : 
+- Une carte Arduino Uno ou Mega
+- 2 LED RGB à cathode commune
+- 6 résistances de 220 Ω (une par couleur)
+- Une breadboard et des fils
 
-```C++
-void green(RGB led){
-    digitalWrite(led.green,HIGH);
-    digitalWrite(led.red,LOW);
-    digitalWrite(led.blue,LOW);
-  }
-```
+## **Le câblage**
 
-- Turn on Blue Color : 
+___
 
-```C++
-void blue(RGB led){
-    digitalWrite(led.red,LOW);
-    digitalWrite(led.green,LOW);
-    digitalWrite(led.blue,HIGH);
-  }
-```
+| LED | Rouge | Vert | Bleu | Commun |
+|---|---|---|---|---|
+| LED 1 | broche 9 | broche 10 | broche 11 | GND |
+| LED 2 | broche 5 | broche 6 | broche 7 | GND |
 
-## **Setup Function :**
+> Chaque couleur passe par sa propre résistance de 220 Ω. La patte la plus longue de la LED est la broche commune.
 
-Initialize the LED pins as an Output
+## **La struct**
 
-In the setup function I use the same technique by written a function do the setup for me just by given it the RGB led object as a parameter
+___
 
-> In this way we optimize the code so much better in case if we have multiple RGB LEDs.
-
-#### Funtion Setup led :
-```C++
-void SetupLed(RGB led){
-    pinMode(led.red,OUTPUT);
-    pinMode(led.green,OUTPUT);
-    pinMode(led.blue,OUTPUT);
-  }
-```
-#### Setup Funtion : 
-
-```C++
-void setup() {
-  SetupLed(led);
-}
-```
-
-## **Loop Function :**
-
-In the loop function we just gonna call each color to turn on for 1 second : 
-
-```C++
-void loop() {
-  red(led);
-  delay(1000);
-  green(led);
-  delay(1000);
-  blue(led);
-  delay(1000);
-}
-```
-
-## **The Complet Code :** 
+Une `struct` permet de créer notre propre type de variable, qui regroupe plusieurs valeurs. Une LED RGB a toujours 3 broches, donc c'est le bon outil :
 
 ```C++
 struct RGB {
-    int red;
-    int green;
-    int blue;
-  }; 
-
-RGB led = {9,10,11};
-
-void SetupLed(RGB led){
-    pinMode(led.red,OUTPUT);
-    pinMode(led.green,OUTPUT);
-    pinMode(led.blue,OUTPUT);
-  }
-
-void red(RGB led){
-    digitalWrite(led.red,HIGH);
-    digitalWrite(led.green,LOW);
-    digitalWrite(led.blue,LOW);
-  }
-
-void green(RGB led){
-    digitalWrite(led.green,HIGH);
-    digitalWrite(led.red,LOW);
-    digitalWrite(led.blue,LOW);
-  }
-
-void blue(RGB led){
-    digitalWrite(led.red,LOW);
-    digitalWrite(led.green,LOW);
-    digitalWrite(led.blue,HIGH);
-  }
-  
-
-void setup() {
-  // put your setup code here, to run once:
-  SetupLed(led);
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-  red(led);
-  delay(1000);
-  green(led);
-  delay(1000);
-  blue(led);
-  delay(1000);
-}
-
+  int red;
+  int green;
+  int blue;
+};
 ```
 
-## **The Complet Code for using Two RGB LEDs :**
+Ensuite on crée nos deux LED en donnant les broches de chaque couleur :
 
 ```C++
-struct RGB {
-    int red;
-    int green;
-    int blue;
-  }; 
+RGB led1 = {9, 10, 11};
+RGB led2 = {5, 6, 7};
+```
 
-RGB led1 = {9,10,11};
-RGB led2 = {5,6,7};
+## **Les fonctions**
 
-void SetupLed(RGB led){
-    pinMode(led.red,OUTPUT);
-    pinMode(led.green,OUTPUT);
-    pinMode(led.blue,OUTPUT);
-  }
+___
 
-void red(RGB led){
-    digitalWrite(led.red,HIGH);
-    digitalWrite(led.green,LOW);
-    digitalWrite(led.blue,LOW);
-  }
+On écrit une fonction pour chaque couleur. Elle reçoit la LED en paramètre, donc la même fonction marche pour les deux LED :
 
-void green(RGB led){
-    digitalWrite(led.green,HIGH);
-    digitalWrite(led.red,LOW);
-    digitalWrite(led.blue,LOW);
-  }
+```C++
+void red(RGB led) {
+  digitalWrite(led.red, HIGH);
+  digitalWrite(led.green, LOW);
+  digitalWrite(led.blue, LOW);
+}
+```
 
-void blue(RGB led){
-    digitalWrite(led.red,LOW);
-    digitalWrite(led.green,LOW);
-    digitalWrite(led.blue,HIGH);
-  }
-  
+On fait pareil pour le `setup` : une seule fonction met les 3 broches d'une LED en sortie.
 
+```C++
+void SetupLed(RGB led) {
+  pinMode(led.red, OUTPUT);
+  pinMode(led.green, OUTPUT);
+  pinMode(led.blue, OUTPUT);
+}
+```
+
+> Si demain on ajoute une troisième LED, on ajoute juste une ligne `RGB led3 = {...};`. Les fonctions ne changent pas.
+
+## **Les fonctions setup() et loop()**
+
+___
+
+```C++
 void setup() {
-  // put your setup code here, to run once:
   SetupLed(led1);
   SetupLed(led2);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  red(led1);
-  red(led2);
-  delay(1000);
-  green(led1);
-  green(led2);
-  delay(1000);
-  blue(led1);
-  blue(led2);
-  delay(1000);
+  red(led1);    red(led2);    delay(1000);
+  green(led1);  green(led2);  delay(1000);
+  blue(led1);   blue(led2);   delay(1000);
 }
 ```
+
+## **Le code complet**
+
 ___
 
-If you have any Question or Collaboration feel free to Visit my portfolio and contact me 
+```C++
+/*
+ * Projet : changer la couleur de deux LED RGB avec une struct
+ * Zakpy Academy - RHIBA Zakaria
+ * Carte : Arduino Uno ou Mega
+ *
+ * LED RGB à cathode commune : la broche commune va au GND,
+ * et chaque couleur passe par une résistance de 220 ohms.
+ */
 
-> you can visit my protfolio over here :
-[Rhiba Zakaria porfolio](https://zak-rhiba.codes)
+// Une LED RGB, c'est 3 broches : rouge, vert et bleu
+struct RGB {
+  int red;
+  int green;
+  int blue;
+};
+
+RGB led1 = {9, 10, 11};   // broches de la première LED
+RGB led2 = {5, 6, 7};     // broches de la deuxième LED
+
+// Met les 3 broches d'une LED en sortie
+void SetupLed(RGB led) {
+  pinMode(led.red, OUTPUT);
+  pinMode(led.green, OUTPUT);
+  pinMode(led.blue, OUTPUT);
+}
+
+// Allume la couleur rouge seulement
+void red(RGB led) {
+  digitalWrite(led.red, HIGH);
+  digitalWrite(led.green, LOW);
+  digitalWrite(led.blue, LOW);
+}
+
+// Allume la couleur verte seulement
+void green(RGB led) {
+  digitalWrite(led.red, LOW);
+  digitalWrite(led.green, HIGH);
+  digitalWrite(led.blue, LOW);
+}
+
+// Allume la couleur bleue seulement
+void blue(RGB led) {
+  digitalWrite(led.red, LOW);
+  digitalWrite(led.green, LOW);
+  digitalWrite(led.blue, HIGH);
+}
+
+void setup() {
+  SetupLed(led1);
+  SetupLed(led2);
+}
+
+void loop() {
+  red(led1);    red(led2);    delay(1000);   // rouge pendant 1 s
+  green(led1);  green(led2);  delay(1000);   // vert pendant 1 s
+  blue(led1);   blue(led2);   delay(1000);   // bleu pendant 1 s
+}
+```
+
+## **Pour aller plus loin**
+
+___
+
+- Mélange les couleurs : rouge + vert donne du jaune, rouge + bleu donne du violet.
+- Utilise `analogWrite()` à la place de `digitalWrite()` pour avoir des nuances de couleur. Attention, il faut des broches PWM (sur la Uno, la broche 7 n'est pas PWM).
+- Si ta LED est à anode commune, la broche commune va au 5 V et il faut inverser HIGH et LOW.
+
+___
+
+Tous les cours et les vidéos sont sur **[Zakpy Academy](https://academy.zakpy.com)**.
+
+Une question ou une collaboration ? Tu peux me contacter depuis mon portfolio : [Rhiba Zakaria](https://zak-rhiba.codes)
