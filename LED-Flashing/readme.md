@@ -140,4 +140,4 @@ ___
 
 Tous les cours et les vidéos sont sur **[Zakpy Academy](https://academy.zakpy.com)**.
 
-Une question ou une collaboration ? Tu peux me contacter depuis mon portfolio : [Rhiba Zakaria](https://zak-rhiba.codes)
+Une question ou une collaboration ? Tu peux me contacter depuis mon portfolio : [Rhiba Zakaria](https://zakariarhiba.tech)

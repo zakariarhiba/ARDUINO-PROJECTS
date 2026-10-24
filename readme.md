@@ -46,4 +46,4 @@ Chaque `readme.md` commence par un petit bloc d'informations (titre, niveau, dur
 
 ___
 
-Une question ou une collaboration ? Tu peux me contacter depuis mon portfolio : [Rhiba Zakaria](https://zak-rhiba.codes)
+Une question ou une collaboration ? Tu peux me contacter depuis mon portfolio : [Rhiba Zakaria](https://zakariarhiba.tech)
