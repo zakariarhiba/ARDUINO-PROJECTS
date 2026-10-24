@@ -72,6 +72,8 @@ ___
 
 ___
 
+![Le schéma du projet sur Proteus : Arduino Mega 2560, LM35, afficheur 7 segments, potentiomètre et LED (ici un afficheur à anode commune avec des inverseurs 4049)](images/schema-proteus.png)
+
 | Élément | Broche Arduino |
 |---|---|
 | LM35 (sortie Vout) | A0 |

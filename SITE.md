@@ -44,9 +44,20 @@ Le fichier commence par un en-tête entre deux lignes `---` (front matter). Le s
 | `wokwi` | lien | (optionnel) le circuit de simulation |
 | `resources` | liste de `label` + `url` | les documents à télécharger (PDF, datasheets, liens) |
 | `github` | lien | le dossier du projet sur GitHub |
+| `cover` | "images/montage.jpg" | (optionnel) la photo de la carte du projet |
 | `author`, `updated` | | l'auteur et la date de mise à jour |
 
-## 4. Ajouter un projet ou une vidéo
+## 4. Les images (photos et schémas)
+
+Les photos du montage et les schémas d'un projet vont dans son dossier `images/` (PNG, JPG ou WebP, moins de 500 Ko si possible). Dans le readme, on les met avec un chemin relatif, et le texte entre crochets sert de légende :
+
+```
+![Le montage sur la breadboard](images/montage.jpg)
+```
+
+GitHub les affiche, et le site copie chaque image utilisée sur ses propres pages. Le champ optionnel `cover` de l'en-tête (par exemple `cover: "images/montage.jpg"`) donne la photo de la carte du projet sur le site ; sans `cover`, le site prend la miniature de la vidéo.
+
+## 5. Ajouter un projet ou une vidéo
 
 1. Crée le dossier du projet avec son readme (copie l'en-tête d'un autre projet et change les valeurs).
 2. Quand la vidéo est publiée, colle son lien dans le champ `youtube` du readme.
