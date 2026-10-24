@@ -57,9 +57,11 @@ Les photos du montage et les schémas d'un projet vont dans son dossier `images/
 
 GitHub les affiche, et le site copie chaque image utilisée sur ses propres pages. Le champ optionnel `cover` de l'en-tête (par exemple `cover: "images/montage.jpg"`) donne la photo de la carte du projet sur le site ; sans `cover`, le site prend la miniature de la vidéo.
 
-## 5. Les traductions (anglais et darija)
+## 5. Les traductions (anglais et arabe)
 
-Le readme en français (`readme.md`) est la source. À côté, `readme.en.md` (anglais) et `readme.ary.md` (darija, écrit en lettres arabes) sont ses traductions. Leur en-tête ne contient que les champs traduits : `title`, `description`, `board`, `notions`, `components`, et `resources` si les noms des documents changent. Tout le reste (slug, vidéo, code…) vient du readme français.
+Le readme en français (`readme.md`) est la source. À côté, `readme.en.md` (anglais) et `readme.ar.md` (arabe clair, pas la darija) sont ses traductions. Leur en-tête ne contient que les champs traduits : `title`, `description`, `board`, `notions`, `components`, et `resources` si les noms des documents changent. Tout le reste (slug, vidéo, code…) vient du readme français.
+
+En arabe, on traduit aussi les mots techniques (résistance → مقاومة, broche → منفذ, afficheur 7 segments → شاشة العرض ذات القطع السبع…) ; on ne garde en lettres latines que les noms (Arduino, LM35, LED, DHT11) et le code, sinon les lignes se mélangent.
 
 Le code reste le même que le fichier `.ino`, commentaires compris. Le site affiche la version qui correspond à la langue choisie par le visiteur ; s'il n'y a pas de traduction, il affiche le français avec une petite note. Quand on change le readme français, il faut changer les traductions aussi.
 
