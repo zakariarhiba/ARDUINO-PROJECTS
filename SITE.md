@@ -57,7 +57,13 @@ Les photos du montage et les schémas d'un projet vont dans son dossier `images/
 
 GitHub les affiche, et le site copie chaque image utilisée sur ses propres pages. Le champ optionnel `cover` de l'en-tête (par exemple `cover: "images/montage.jpg"`) donne la photo de la carte du projet sur le site ; sans `cover`, le site prend la miniature de la vidéo.
 
-## 5. Ajouter un projet ou une vidéo
+## 5. Les traductions (anglais et darija)
+
+Le readme en français (`readme.md`) est la source. À côté, `readme.en.md` (anglais) et `readme.ary.md` (darija, écrit en lettres arabes) sont ses traductions. Leur en-tête ne contient que les champs traduits : `title`, `description`, `board`, `notions`, `components`, et `resources` si les noms des documents changent. Tout le reste (slug, vidéo, code…) vient du readme français.
+
+Le code reste le même que le fichier `.ino`, commentaires compris. Le site affiche la version qui correspond à la langue choisie par le visiteur ; s'il n'y a pas de traduction, il affiche le français avec une petite note. Quand on change le readme français, il faut changer les traductions aussi.
+
+## 6. Ajouter un projet ou une vidéo
 
 1. Crée le dossier du projet avec son readme (copie l'en-tête d'un autre projet et change les valeurs).
 2. Quand la vidéo est publiée, colle son lien dans le champ `youtube` du readme.
