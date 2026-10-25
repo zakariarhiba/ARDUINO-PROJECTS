@@ -10,6 +10,11 @@ notions: ["ADC et référence 1,1 V", "afficheur 7 segments", "multiplexage", "r
 components: ["Arduino Mega 2560", "capteur LM35", "afficheur 7 segments 4 chiffres", "potentiomètre 1 kΩ", "1 LED", "8 résistances 1 kΩ", "résistance 3,3 kΩ", "résistance 220 Ω"]
 tags: ["capteur", "température", "7 segments", "timers", "interruptions"]
 youtube: "https://youtu.be/OAM6kZShvFw"
+videos:
+  - url: "https://youtu.be/OAM6kZShvFw"
+    duration: "1 h"
+  - url: "https://youtu.be/QV_i8QGy2lg"
+    duration: "2 h"
 code: "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/Digital_Thermometer_LM35/Digital_Thermometer_LM35.ino"
 wokwi: "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/Digital_Thermometer_LM35/wokwi"
 resources:
@@ -23,7 +28,7 @@ resources:
     url: "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/Digital_Thermometer_LM35/wokwi"
 github: "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/Digital_Thermometer_LM35"
 author: "RHIBA Zakaria"
-updated: "2026-10-24"
+updated: "2026-10-25"
 ---
 
 # **Thermomètre numérique avec alarme réglable**

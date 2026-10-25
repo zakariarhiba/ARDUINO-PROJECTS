@@ -40,6 +40,7 @@ Le fichier commence par un en-tête entre deux lignes `---` (front matter). Le s
 | `components` | liste | le matériel |
 | `tags` | liste | pour filtrer les leçons |
 | `youtube` | "" | **le lien de la vidéo, à remplir quand elle est en ligne** |
+| `videos` | liste de `url` + `duration` | (optionnel) quand la vidéo est en plusieurs parties : une ligne par partie, dans l'ordre (Partie 1, Partie 2…). `youtube` garde le lien de la partie 1 |
 | `code` | lien | le fichier .ino brut |
 | `wokwi` | lien | (optionnel) le circuit de simulation |
 | `resources` | liste de `label` + `url` | les documents à télécharger (PDF, datasheets, liens) |

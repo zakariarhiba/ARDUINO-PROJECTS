@@ -185,6 +185,16 @@
         "interruptions"
       ],
       "youtube": "https://youtu.be/OAM6kZShvFw",
+      "videos": [
+        {
+          "url": "https://youtu.be/OAM6kZShvFw",
+          "duration": "1 h"
+        },
+        {
+          "url": "https://youtu.be/QV_i8QGy2lg",
+          "duration": "2 h"
+        }
+      ],
       "code": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/Digital_Thermometer_LM35/Digital_Thermometer_LM35.ino",
       "wokwi": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/Digital_Thermometer_LM35/wokwi",
       "resources": [
@@ -207,7 +217,7 @@
       ],
       "github": "https://github.com/zakariarhiba/ARDUINO-PROJECTS/tree/main/Digital_Thermometer_LM35",
       "author": "RHIBA Zakaria",
-      "updated": "2026-10-24",
+      "updated": "2026-10-25",
       "folder": "Digital_Thermometer_LM35",
       "readme": "https://raw.githubusercontent.com/zakariarhiba/ARDUINO-PROJECTS/main/Digital_Thermometer_LM35/readme.md"
     }
